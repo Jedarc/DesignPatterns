@@ -1,0 +1,10 @@
+C:\Source\Repos\DesignPatterns\SimUPato\bin\Debug\netcoreapp1.1\SimUPato.deps.json
+C:\Source\Repos\DesignPatterns\SimUPato\bin\Debug\netcoreapp1.1\SimUPato.runtimeconfig.json
+C:\Source\Repos\DesignPatterns\SimUPato\bin\Debug\netcoreapp1.1\SimUPato.runtimeconfig.dev.json
+C:\Source\Repos\DesignPatterns\SimUPato\obj\Debug\netcoreapp1.1\SimUPato.csprojResolveAssemblyReference.cache
+C:\Source\Repos\DesignPatterns\SimUPato\obj\Debug\netcoreapp1.1\SimUPato.csproj.CoreCompileInputs.cache
+C:\Source\Repos\DesignPatterns\SimUPato\obj\Debug\netcoreapp1.1\SimUPato.AssemblyInfo.cs
+C:\Source\Repos\DesignPatterns\SimUPato\bin\Debug\netcoreapp1.1\SimUPato.dll
+C:\Source\Repos\DesignPatterns\SimUPato\bin\Debug\netcoreapp1.1\SimUPato.pdb
+C:\Source\Repos\DesignPatterns\SimUPato\obj\Debug\netcoreapp1.1\SimUPato.dll
+C:\Source\Repos\DesignPatterns\SimUPato\obj\Debug\netcoreapp1.1\SimUPato.pdb

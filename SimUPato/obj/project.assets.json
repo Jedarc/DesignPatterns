@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "targets": {
     ".NETCoreApp,Version=v1.1": {
       "Libuv/1.9.1": {
@@ -7041,17 +7041,26 @@
   },
   "project": {
     "version": "1.0.0",
+    "restoreSettings": {
+      "hideWarningsAndErrors": true
+    },
     "restore": {
-      "projectUniqueName": "c:\\Users\\jedaias.chaves\\Desktop\\DesignPatterns\\SimUPato\\SimUPato.csproj",
+      "projectUniqueName": "C:\\Source\\Repos\\DesignPatterns\\SimUPato\\SimUPato.csproj",
       "projectName": "SimUPato",
-      "projectPath": "c:\\Users\\jedaias.chaves\\Desktop\\DesignPatterns\\SimUPato\\SimUPato.csproj",
-      "outputPath": "c:\\Users\\jedaias.chaves\\Desktop\\DesignPatterns\\SimUPato\\obj\\",
+      "projectPath": "C:\\Source\\Repos\\DesignPatterns\\SimUPato\\SimUPato.csproj",
+      "packagesPath": "C:\\Users\\jedaias.chaves\\.nuget\\packages\\",
+      "outputPath": "C:\\Source\\Repos\\DesignPatterns\\SimUPato\\obj\\",
       "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\jedaias.chaves\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
       "originalTargetFrameworks": [
         "netcoreapp1.1"
       ],
-      "files": {
-        "lib/netcoreapp1.1/SimUPato.dll": "c:\\Users\\jedaias.chaves\\Desktop\\DesignPatterns\\SimUPato\\bin\\placeholder\\netcoreapp1.1\\SimUPato.dll"
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp1.1": {
@@ -7064,7 +7073,8 @@
         "dependencies": {
           "Microsoft.NETCore.App": {
             "target": "Package",
-            "version": "1.1.2"
+            "version": "1.1.2",
+            "autoReferenced": true
           }
         }
       }

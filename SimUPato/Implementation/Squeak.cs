@@ -5,7 +5,7 @@ namespace SimUPato.Implementation
 {
     public class Squeak : QuackBehavior
     {
-        public void quack()
+        public void Quack()
         {
             Console.WriteLine("Squeak");
         }
