@@ -24,6 +24,16 @@ namespace SimUPato.SuperClass
             quackBehavior.Quack();
         }
 
+        public void SetFlyBehavior(FlyBehavior fb)
+        {
+            flyBehavior = fb;
+        }
+
+        public void SetQuackBehavior(QuackBehavior qb)
+        {
+            quackBehavior = qb;
+        }
+
         public void Swim()
         {
             Console.WriteLine("All ducks float, even decoys!");

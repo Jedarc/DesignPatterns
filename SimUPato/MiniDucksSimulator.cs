@@ -1,5 +1,6 @@
 ﻿using System;
 using SimUPato.DerivedClass;
+using SimUPato.Implementation;
 
 namespace SimUPato
 {
@@ -10,6 +11,14 @@ namespace SimUPato
             var mallard = new MallardDuck();
             mallard.PerformQuack();
             mallard.PerformFly();
+
+            Console.WriteLine();
+            Console.WriteLine("--- Dynamic behavior ---");
+
+            var model = new ModelDuck();
+            model.PerformFly();
+            model.SetFlyBehavior(new FlyRocketPowered());
+            model.PerformFly();
 
             Console.ReadKey();
         }
