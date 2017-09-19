@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using WeatherStation.Interfaces;
+using WeatherStation.SuperClass;
 
 namespace WeatherStation.Implementation
 {
@@ -9,21 +10,26 @@ namespace WeatherStation.Implementation
     {
         private double currentPressure;
         private double lastPressure;
-        private WeatherData weatherData;
+        private Observable observable;
 
-        public ForecastDisplay(WeatherData weatherData)
+        public ForecastDisplay(Observable observable)
         {
-            this.weatherData = weatherData;
+            this.observable = observable;
             currentPressure = 0;
             lastPressure = 0;
-            weatherData.RegisterObserver(this);
+            observable.RegisterObserver(this);
         }
 
-        public void Update(double temperature, double humidity, double pressure)
+        public void Update(Observable observable)
         {
-            lastPressure = currentPressure;
-            currentPressure = pressure;
+            if (observable is WeatherData)
+            {
+                var weatherData = (WeatherData)observable;
 
+                lastPressure = currentPressure;
+                currentPressure = weatherData.GetPressure();
+            }
+            
             Display();
         }
 

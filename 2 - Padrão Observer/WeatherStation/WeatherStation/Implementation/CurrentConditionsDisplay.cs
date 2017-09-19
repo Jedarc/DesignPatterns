@@ -2,25 +2,32 @@
 using System.Collections.Generic;
 using System.Text;
 using WeatherStation.Interfaces;
+using WeatherStation.SuperClass;
 
 namespace WeatherStation.Implementation
 {
-    public class CurrentConditionsDisplay:Observer, DisplayElement
+    public class CurrentConditionsDisplay : Observer, DisplayElement
     {
         private double temperature;
         private double humidity;
-        private Subject weatherData;
+        private Observable observable;
 
-        public CurrentConditionsDisplay(Subject weatherData)
+        public CurrentConditionsDisplay(Observable observable)
         {
-            this.weatherData = weatherData;
-            weatherData.RegisterObserver(this);
+            this.observable = observable;
+            observable.RegisterObserver(this);
         }
 
-        public void Update(double temperature, double humidity, double pressure)
+        public void Update(Observable observable)
         {
-            this.temperature = temperature;
-            this.humidity = humidity;
+            if (observable is WeatherData)
+            {
+                var weatherData = (WeatherData)observable;
+
+                this.temperature = weatherData.GetTemperature();
+                this.humidity = weatherData.GetHumidity();
+            }
+
             Display();
         }
 

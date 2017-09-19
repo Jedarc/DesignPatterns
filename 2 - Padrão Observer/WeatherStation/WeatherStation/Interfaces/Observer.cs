@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using WeatherStation.SuperClass;
 
 namespace WeatherStation.Interfaces
 {
     public interface Observer
     {
-        void Update(double temperature, double humidity, double pressure);
+        void Update(Observable observable);
     }
 }

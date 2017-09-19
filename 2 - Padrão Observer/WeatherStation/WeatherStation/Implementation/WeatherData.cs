@@ -2,48 +2,17 @@
 using System.Collections.Generic;
 using System.Text;
 using WeatherStation.Interfaces;
+using WeatherStation.SuperClass;
 
 namespace WeatherStation.Implementation
 {
-    public class WeatherData : Subject
+    public class WeatherData : Observable
     {
-        private List<Observer> observerList;
         private double temperature;
         private double humidity;
         private double pressure;
 
-        public WeatherData()
-        {
-            observerList = new List<Observer>();
-        }
-
-        public bool RegisterObserver(Observer observer)
-        {
-            try
-            {
-                observerList.Add(observer);
-                return true;
-            }
-            catch { }
-
-            return false;
-        }
-
-        public bool RemoveObserver(Observer observer)
-        {
-            return observerList.Remove(observer);
-        }
-
-        public void NotifyObservers()
-        {
-            for (int observerIndex = 0; observerIndex < observerList.Count; observerIndex++)
-            {
-                var observer = observerList[observerIndex];
-                observer.Update(temperature, humidity, pressure);
-            }
-        }
-
-        protected void MeasurementsChanged()
+        private void MeasurementsChanged()
         {
             NotifyObservers();
         }
@@ -57,5 +26,17 @@ namespace WeatherStation.Implementation
             MeasurementsChanged();
         }
 
+        public double GetTemperature()
+        {
+            return this.temperature;
+        }
+        public double GetHumidity()
+        {
+            return this.humidity;
+        }
+        public double GetPressure()
+        {
+            return this.pressure;
+        }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using WeatherStation.Interfaces;
+using WeatherStation.SuperClass;
 
 namespace WeatherStation.Implementation
 {
@@ -11,30 +12,37 @@ namespace WeatherStation.Implementation
         private double minTemperature;
         private double temperatureSum;
         private int readingsCount;
-        private WeatherData weatherData;
+        private Observable observable;
 
-        public StaticsDisplay(WeatherData weatherData)
+        public StaticsDisplay(Observable observable)
         {
-            this.weatherData = weatherData;
+            this.observable = observable;
             temperatureSum = 0;
             maxTemperature = -100;
             minTemperature = 100;
-            weatherData.RegisterObserver(this);
+            observable.RegisterObserver(this);
         }
 
-        public void Update(double temperature, double humidity, double pressure)
+        public void Update(Observable observable)
         {
-            temperatureSum += temperature;
-            readingsCount++;
-
-            if (temperature > maxTemperature)
+            if (observable is WeatherData)
             {
-                maxTemperature = temperature;
-            }
+                var weatherData = (WeatherData)observable;
 
-            if (temperature < minTemperature)
-            {
-                minTemperature = temperature;
+                var temperature = weatherData.GetTemperature();
+
+                temperatureSum += temperature;
+                readingsCount++;
+
+                if (temperature > maxTemperature)
+                {
+                    maxTemperature = temperature;
+                }
+
+                if (temperature < minTemperature)
+                {
+                    minTemperature = temperature;
+                }
             }
             
             Display();
