@@ -7045,11 +7045,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Source\\Repos\\DesignPatterns\\SimUPato\\SimUPato.csproj",
+      "projectUniqueName": "C:\\Source\\Repos\\DesignPatterns\\1 - Padrão de Estratégia\\SimUPato\\SimUPato.csproj",
       "projectName": "SimUPato",
-      "projectPath": "C:\\Source\\Repos\\DesignPatterns\\SimUPato\\SimUPato.csproj",
+      "projectPath": "C:\\Source\\Repos\\DesignPatterns\\1 - Padrão de Estratégia\\SimUPato\\SimUPato.csproj",
       "packagesPath": "C:\\Users\\jedaias.chaves\\.nuget\\packages\\",
-      "outputPath": "C:\\Source\\Repos\\DesignPatterns\\SimUPato\\obj\\",
+      "outputPath": "C:\\Source\\Repos\\DesignPatterns\\1 - Padrão de Estratégia\\SimUPato\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jedaias.chaves\\AppData\\Roaming\\NuGet\\NuGet.Config",
